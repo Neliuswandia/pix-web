@@ -16,12 +16,6 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/gallery"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Explore Gallery
-            </Link>
-            <Link
               href="/upload"
               className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
@@ -88,31 +82,7 @@ export default function Home() {
         </div>
 
         {/* Quick Links */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-            Quick Navigation
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/about"
-              className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-md"
-            >
-              About Us
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-md"
-            >
-              Contact
-            </Link>
-            <Link
-              href="/profile"
-              className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-md"
-            >
-              My Profile
-            </Link>
-          </div>
-        </div>
+
       </main>
     </div>
   );
