@@ -73,9 +73,21 @@ export default function Upload() {
       return;
     }
     
-    // Generate a mock link for the collection
-    const collectionId = Date.now().toString();
-    const link = `${window.location.origin}/collection/${collectionId}`;
+    // Generate a unique collection ID
+    const collectionId = Date.now().toString(36) + Math.random().toString(36).substr(2);
+    
+    // Generate link to payment app
+    const paymentAppUrl = "http://localhost:3001";
+    let link = "";
+    
+    if (uploadedImages.length === 1) {
+      // Single image link
+      link = `${paymentAppUrl}/?id=${uploadedImages[0].id}&collection=${collectionId}&price=${price}`;
+    } else {
+      // Collection link
+      link = `${paymentAppUrl}/collection/${collectionId}`;
+    }
+    
     setGeneratedLink(link);
     
     // Save to localStorage for demo purposes
